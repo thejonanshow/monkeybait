@@ -1,6 +1,12 @@
 import Layout from "../components/layout"
 
+import NFTVerifierAbi from "@shared/abis/NFTVerifier.json";
+const abi = NFTVerifierAbi.abi;
+
 export default function IndexPage() {
+  console.log('World ID Client ID:', process.env.NEXT_PUBLIC_WORLD_ID_CLIENT_ID);
+  console.log('World ID Client Secret:', process.env.NEXT_PUBLIC_WORLD_ID_CLIENT_SECRET);
+  console.log('Node ENV', process.env.NODE_ENV);
   return (
     <Layout>
       <h1>NextAuth.js Example</h1>

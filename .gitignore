@@ -1,7 +1,11 @@
+# Ignore macOS system files
 .DS_Store
 
+# Ignore node_modules directory
 node_modules/
-logs
+
+# Logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -10,12 +14,38 @@ lerna-debug.log*
 .yarn-integrity
 .npm
 
+# ESLint cache
 .eslintcache
 
+# TypeScript build info
 *.tsbuildinfo
-next-env.d.ts
 
-.next
-.vercel
-.env*.local
+# Next.js build output
+.next/
+
+# Vercel deployment
+.vercel/
+
+# Environment variable files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env
+
+# Ignore specific directories
+frontend/node_modules/
+shared/node_modules/
+contracts/node_modules/
+
+# Ignore built files
+out/
+build/
+
+# Ignore temporary or configuration files
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Ignore Forge artifacts and build cache
+cache/
