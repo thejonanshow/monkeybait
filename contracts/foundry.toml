@@ -19,7 +19,5 @@ path = "./testdata"
 [soldeer]
 remappings_generate = false
 remappings_regenerate = false
-remappings = [
-    "openzeppelin-contracts/=dependencies/openzeppelin-contracts/contracts/",
-    "forge-std/=dependencies/forge-std/src/"
-]
+remappings = ["openzeppelin-contracts/=dependencies/openzeppelin-contracts/contracts/", "forge-std/=dependencies/forge-std/src/"]
+fs_permissions = [{ access = "read", path = "./testdata"}]
