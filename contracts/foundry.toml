@@ -16,3 +16,7 @@ remappings_generate = false
 # whether soldeer re-generates all remappings when installing, updating or uninstalling deps
 remappings_regenerate = false
 
+remappings = [
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+    "forge-std/=lib/forge-std/src/"
+]
