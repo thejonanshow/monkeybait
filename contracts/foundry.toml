@@ -23,7 +23,7 @@ remappings_generate = false
 remappings_regenerate = false
 
 remappings = [
-    "openzeppelin-contracts/=dependencies/openzeppelin-contracts/contracts/",
+    "openzeppelin-contracts/=node_modules/@openzeppelin/contracts/",
     "forge-std/=dependencies/forge-std/src/"
 ]
 
