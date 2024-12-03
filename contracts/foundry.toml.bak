@@ -20,17 +20,4 @@ path = "./testdata"
 remappings_generate = false
 remappings_regenerate = false
 remappings = ["openzeppelin-contracts/=dependencies/openzeppelin-contracts/contracts/", "forge-std/=dependencies/forge-std/src/"]
-
-[[soldeer.fs_permissions]]
-access = "read"
-path = "./testdata"
 fs_permissions = [{ access = "read", path = "./testdata"}]
-
-[dependencies]
-
-[soldeer]
-# whether soldeer manages remappings
-remappings_generate = false
-# whether soldeer re-generates all remappings when installing, updating or uninstalling deps
-remappings_regenerate = false
-
