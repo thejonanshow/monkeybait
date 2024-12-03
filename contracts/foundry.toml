@@ -2,21 +2,29 @@
 src = "src"
 out = "out"
 libs = ["lib", "dependencies"]
-fs_permissions = [{ access = "read", path = "./testdata"}]
+
+[[profile.default.fs_permissions]]
+access = "read"
+path = "./testdata"
 
 [dependencies]
 "@openzeppelin-contracts" = "5.0.1"
 forge-std = "1.9.2"
-risc0-ethereum = { version = "1.1.4", url = "https://github.com/vlayer-xyz/risc0-ethereum/releases/download/v1.1.4-soldeer/contracts.zip" }
 vlayer = "0.1.0-nightly-20241202-164f0bc"
 
+[dependencies.risc0-ethereum]
+version = "1.1.4"
+url = "https://github.com/vlayer-xyz/risc0-ethereum/releases/download/v1.1.4-soldeer/contracts.zip"
+
 [soldeer]
-# whether soldeer manages remappings
+# Whether soldeer manages remappings
 remappings_generate = false
-# whether soldeer re-generates all remappings when installing, updating or uninstalling deps
+# Whether soldeer re-generates all remappings when installing, updating or uninstalling deps
 remappings_regenerate = false
 
 remappings = [
-    "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-    "forge-std/=lib/forge-std/src/"
+    "openzeppelin-contracts/=dependencies/openzeppelin-contracts/contracts/",
+    "forge-std/=dependencies/forge-std/src/"
 ]
+
+fs_permissions = [{ access = "read", path = "./testdata" }]
