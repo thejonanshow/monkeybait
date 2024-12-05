@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.21;
 
-import {Proof} from "vlayer-0.1.0/Proof.sol";
-import {Verifier} from "vlayer-0.1.0/Verifier.sol";
+import {Proof} from "dependencies/vlayer-0.1.0-nightly-20241202-164f0bc/src/Proof.sol";
+import {Verifier} from "dependencies/vlayer-0.1.0-nightly-20241202-164f0bc/src/Verifier.sol";
 
 import {SimpleProver} from "./SimpleProver.sol";
 import {ExampleNFT} from "./ExampleNFT.sol";

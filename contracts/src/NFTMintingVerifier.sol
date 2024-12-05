@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "./@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 contract NFTMintingVerifier {
     event ProofGenerated(address indexed owner, uint256 tokenId, uint256 mintBlock);

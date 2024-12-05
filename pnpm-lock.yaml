@@ -11,8 +11,8 @@ importers:
   contracts:
     dependencies:
       '@openzeppelin/contracts':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.0.0
+        version: 5.0.0
       '@vlayer/sdk':
         specifier: 0.1.0-nightly-20241129-b4519ae
         version: 0.1.0-nightly-20241129-b4519ae(typescript@5.7.2)(vite@6.0.1)
@@ -970,8 +970,8 @@ packages:
       fastq: 1.17.1
     dev: false
 
-  /@openzeppelin/contracts@5.1.0:
-    resolution: {integrity: sha512-p1ULhl7BXzjjbha5aqst+QMLY+4/LCWADXOCsmLHRM77AqiPjnd9vvUN9sosUfhL9JGKpZ0TjEGxgvnizmWGSA==}
+  /@openzeppelin/contracts@5.0.0:
+    resolution: {integrity: sha512-bv2sdS6LKqVVMLI5+zqnNrNU/CA+6z6CmwFXm/MzmOPBRSO5reEJN7z0Gbzvs0/bv/MZZXNklubpwy3v2+azsw==}
     dev: false
 
   /@panva/hkdf@1.2.1:
