@@ -8,10 +8,8 @@ fs_permissions = [{ access = "read", path = "./testdata"}]
 forge-std = "1.9.2"
 risc0-ethereum = { version = "1.1.4", url = "https://github.com/vlayer-xyz/risc0-ethereum/releases/download/v1.1.4-soldeer/contracts.zip" }
 vlayer = "0.1.0-nightly-20241202-164f0bc"
-openzeppelin-contracts = { url = "https://github.com/OpenZeppelin/openzeppelin-contracts", version = "5.0.1" }
+openzeppelin-contracts = { url = "https://github.com/OpenZeppelin/openzeppelin-contracts.git", version = "v5.0.1" }
 
 [soldeer]
-# whether soldeer manages remappings
 remappings_generate = false
-# whether soldeer re-generates all remappings when installing, updating or uninstalling deps
 remappings_regenerate = false
