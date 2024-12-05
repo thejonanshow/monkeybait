@@ -3,14 +3,18 @@ import { fetchMintBlock } from "../utils/fetchMintBlock";
 
 export default function NFTProof() {
   const [mintBlock, setMintBlock] = useState<number | null>(null);
+  const [providerUrl, setProviderUrl] = useState(process.env.ALCHEMY_ETH_SEP_RPC_URL);
+  const [nftContract, setNftContract] = useState("0xYourContractAddress");
+  const [tokenId, setTokenId] = useState("");
 
-  const handleFetch = async () => {
-    const providerUrl = "<YOUR_PROVIDER_URL>";
-    const nftContract = "<NFT_CONTRACT_ADDRESS>";
-    const tokenId = "1";
-
+  const handleFetchMintBlock = async () => {
     try {
-      const block = await fetchMintBlock(providerUrl, nftContract, tokenId);
+      // Convert tokenId to a number
+      const block = await fetchMintBlock(
+        providerUrl,
+        nftContract,
+        Number(tokenId) // Ensure tokenId is a number
+      );
       setMintBlock(block);
     } catch (err) {
       console.error(err);
@@ -19,8 +23,14 @@ export default function NFTProof() {
 
   return (
     <div>
-      <button onClick={handleFetch}>Fetch Mint Block</button>
-      {mintBlock && <p>Mint Block: {mintBlock}</p>}
+      <input
+        type="text"
+        placeholder="Token ID"
+        value={tokenId}
+        onChange={(e) => setTokenId(e.target.value)}
+      />
+      <button onClick={handleFetchMintBlock}>Fetch Mint Block</button>
+      {mintBlock !== null && <p>Mint Block: {mintBlock}</p>}
     </div>
   );
 }
